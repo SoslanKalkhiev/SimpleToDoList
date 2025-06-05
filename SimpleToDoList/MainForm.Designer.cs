@@ -37,35 +37,36 @@
             this.checkBoxDone = new System.Windows.Forms.CheckBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelDueDate = new System.Windows.Forms.Label();
+            this.buttonEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonAdd
             // 
             this.buttonAdd.Location = new System.Drawing.Point(466, 231);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(89, 40);
+            this.buttonAdd.Size = new System.Drawing.Size(89, 38);
             this.buttonAdd.TabIndex = 0;
-            this.buttonAdd.Text = "button1";
+            this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(466, 289);
+            this.buttonRemove.Location = new System.Drawing.Point(589, 231);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(89, 38);
             this.buttonRemove.TabIndex = 1;
-            this.buttonRemove.Text = "button2";
+            this.buttonRemove.Text = "Удалить";
             this.buttonRemove.UseVisualStyleBackColor = true;
             this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
             // buttonToggleDone
             // 
-            this.buttonToggleDone.Location = new System.Drawing.Point(466, 345);
+            this.buttonToggleDone.Location = new System.Drawing.Point(466, 293);
             this.buttonToggleDone.Name = "buttonToggleDone";
-            this.buttonToggleDone.Size = new System.Drawing.Size(89, 37);
+            this.buttonToggleDone.Size = new System.Drawing.Size(89, 38);
             this.buttonToggleDone.TabIndex = 2;
-            this.buttonToggleDone.Text = "button3";
+            this.buttonToggleDone.Text = "Изменить состояние";
             this.buttonToggleDone.UseVisualStyleBackColor = true;
             this.buttonToggleDone.Click += new System.EventHandler(this.buttonToggleDone_Click);
             // 
@@ -95,36 +96,48 @@
             // checkBoxDone
             // 
             this.checkBoxDone.AutoSize = true;
-            this.checkBoxDone.Location = new System.Drawing.Point(451, 167);
+            this.checkBoxDone.Location = new System.Drawing.Point(451, 181);
             this.checkBoxDone.Name = "checkBoxDone";
-            this.checkBoxDone.Size = new System.Drawing.Size(80, 17);
+            this.checkBoxDone.Size = new System.Drawing.Size(83, 17);
             this.checkBoxDone.TabIndex = 6;
-            this.checkBoxDone.Text = "checkBox1";
+            this.checkBoxDone.Text = "Выполнено";
             this.checkBoxDone.UseVisualStyleBackColor = true;
+            this.checkBoxDone.CheckedChanged += new System.EventHandler(this.checkBoxDone_CheckedChanged);
             // 
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Location = new System.Drawing.Point(448, 50);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(35, 13);
+            this.labelTitle.Size = new System.Drawing.Size(86, 13);
             this.labelTitle.TabIndex = 7;
-            this.labelTitle.Text = "label1";
+            this.labelTitle.Text = "Введите задачу";
             // 
             // labelDueDate
             // 
             this.labelDueDate.AutoSize = true;
-            this.labelDueDate.Location = new System.Drawing.Point(448, 125);
+            this.labelDueDate.Location = new System.Drawing.Point(448, 115);
             this.labelDueDate.Name = "labelDueDate";
-            this.labelDueDate.Size = new System.Drawing.Size(35, 13);
+            this.labelDueDate.Size = new System.Drawing.Size(74, 13);
             this.labelDueDate.TabIndex = 8;
-            this.labelDueDate.Text = "label2";
+            this.labelDueDate.Text = "Введите дату";
+            this.labelDueDate.Click += new System.EventHandler(this.labelDueDate_Click);
+            // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Location = new System.Drawing.Point(589, 293);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(89, 37);
+            this.buttonEdit.TabIndex = 9;
+            this.buttonEdit.Text = "Редактировать";
+            this.buttonEdit.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.labelDueDate);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.checkBoxDone);
@@ -135,7 +148,8 @@
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.buttonAdd);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Список задач";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,6 +166,7 @@
         private System.Windows.Forms.CheckBox checkBoxDone;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelDueDate;
+        private System.Windows.Forms.Button buttonEdit;
     }
 }
 

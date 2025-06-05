@@ -11,6 +11,7 @@ namespace SimpleToDoList
         public string Title { get; set; }
         public DateTime DueDate { get; set; }
         public bool IsDone { get; set; }
+   
         public ToDoItem()
         {
             Title = "";
@@ -27,11 +28,11 @@ namespace SimpleToDoList
         {
             if (!IsDone && DueDate < DateTime.Today)
             {
-                return Title + " (Overdue)";
+                return Title + " (Просрочено)";
             }
             if (IsDone)
             {
-                return "[Done] " + Title;
+                return "[Сделано] " + Title;
             }
 
             return $"{Title} ({DueDate:dd.MM.yyyy})";
