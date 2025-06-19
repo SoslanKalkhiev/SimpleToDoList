@@ -16,6 +16,8 @@ namespace SimpleToDoList
         public MainForm()
         {
             InitializeComponent();
+            listBoxTasks.DrawMode = DrawMode.OwnerDrawFixed;
+            listBoxTasks.DrawItem += listBoxTasks_DrawItem;
             tasks = ToDoStorage.Load();
             RefreshTasksList();
         }
@@ -39,6 +41,22 @@ namespace SimpleToDoList
             dateTimePickerDue.Value = DateTime.Today;
             ToDoStorage.Save(tasks);    
             RefreshTasksList();
+        }
+        private void listBoxTasks_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0 || e.Index >= tasks.Count)
+                return;
+
+            var item = tasks[e.Index];
+            var isOverdue = !item.IsDone && item.DueDate < DateTime.Today;
+            Color textColor = isOverdue ? Color.Red : Color.Black;
+
+            e.DrawBackground();
+            using (Brush brush = new SolidBrush(textColor))
+            {
+                e.Graphics.DrawString(item.ToString(), e.Font, brush, e.Bounds);
+            }
+            e.DrawFocusRectangle();
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)
@@ -77,27 +95,14 @@ namespace SimpleToDoList
             }
         }
 
-        private void RefreshTasksList()
-        {
-            listBoxTasks.Items.Clear();
-            foreach (var t in tasks)
+            private void RefreshTasksList()
             {
-                listBoxTasks.Items.Add(t);
-            }
-            for (int i = 0; i < tasks.Count; i++)
-            {
-                if (!tasks[i].IsDone && tasks[i].DueDate < DateTime.Today)
+                listBoxTasks.Items.Clear();
+                foreach (var t in tasks)
                 {
-                    listBoxTasks.ForeColor = Color.Black; 
-                    listBoxTasks.ForeColor = Color.Red;
-                    break;
-                }
-                else
-                {
-                    listBoxTasks.ForeColor = Color.Black;
+                    listBoxTasks.Items.Add(t);
                 }
             }
-        }
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
@@ -118,6 +123,11 @@ namespace SimpleToDoList
                 MessageBox.Show("Сначала выберите дело из списка.", "Внимание",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void checkBoxDone_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -102,6 +102,7 @@
             this.checkBoxDone.TabIndex = 6;
             this.checkBoxDone.Text = "Выполнено";
             this.checkBoxDone.UseVisualStyleBackColor = true;
+            this.checkBoxDone.CheckedChanged += new System.EventHandler(this.checkBoxDone_CheckedChanged);
             // 
             // labelTitle
             // 
