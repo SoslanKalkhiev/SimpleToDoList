@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonRemove = new System.Windows.Forms.Button();
             this.buttonToggleDone = new System.Windows.Forms.Button();
@@ -42,7 +43,8 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(482, 237);
+            this.buttonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAdd.Location = new System.Drawing.Point(417, 237);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(96, 48);
             this.buttonAdd.TabIndex = 0;
@@ -52,7 +54,8 @@
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(617, 237);
+            this.buttonRemove.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonRemove.Location = new System.Drawing.Point(551, 237);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(96, 48);
             this.buttonRemove.TabIndex = 1;
@@ -62,7 +65,8 @@
             // 
             // buttonToggleDone
             // 
-            this.buttonToggleDone.Location = new System.Drawing.Point(482, 321);
+            this.buttonToggleDone.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonToggleDone.Location = new System.Drawing.Point(417, 321);
             this.buttonToggleDone.Name = "buttonToggleDone";
             this.buttonToggleDone.Size = new System.Drawing.Size(96, 48);
             this.buttonToggleDone.TabIndex = 2;
@@ -72,6 +76,7 @@
             // 
             // listBoxTasks
             // 
+            this.listBoxTasks.Cursor = System.Windows.Forms.Cursors.Hand;
             this.listBoxTasks.FormattingEnabled = true;
             this.listBoxTasks.Location = new System.Drawing.Point(26, 53);
             this.listBoxTasks.Name = "listBoxTasks";
@@ -88,6 +93,7 @@
             // 
             // dateTimePickerDue
             // 
+            this.dateTimePickerDue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePickerDue.Location = new System.Drawing.Point(451, 141);
             this.dateTimePickerDue.Name = "dateTimePickerDue";
             this.dateTimePickerDue.Size = new System.Drawing.Size(127, 20);
@@ -96,6 +102,7 @@
             // checkBoxDone
             // 
             this.checkBoxDone.AutoSize = true;
+            this.checkBoxDone.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBoxDone.Location = new System.Drawing.Point(451, 167);
             this.checkBoxDone.Name = "checkBoxDone";
             this.checkBoxDone.Size = new System.Drawing.Size(83, 17);
@@ -107,11 +114,13 @@
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
+            this.labelTitle.BackColor = System.Drawing.SystemColors.Menu;
             this.labelTitle.Location = new System.Drawing.Point(448, 63);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(79, 13);
             this.labelTitle.TabIndex = 7;
             this.labelTitle.Text = "Введите дело:";
+            this.labelTitle.Click += new System.EventHandler(this.labelTitle_Click);
             // 
             // labelDueDate
             // 
@@ -124,7 +133,8 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(617, 321);
+            this.buttonEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEdit.Location = new System.Drawing.Point(551, 321);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(96, 48);
             this.buttonEdit.TabIndex = 9;
@@ -134,9 +144,12 @@
             // 
             // MainForm
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(721, 450);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.labelDueDate);
             this.Controls.Add(this.labelTitle);
@@ -147,8 +160,11 @@
             this.Controls.Add(this.buttonToggleDone);
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.buttonAdd);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "Список дел";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

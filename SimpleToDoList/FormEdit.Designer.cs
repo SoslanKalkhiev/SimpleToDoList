@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEdit));
             this.textBoxText = new System.Windows.Forms.TextBox();
             this.dateTimePickerDue = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,6 +46,7 @@
             // 
             // dateTimePickerDue
             // 
+            this.dateTimePickerDue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePickerDue.Location = new System.Drawing.Point(150, 157);
             this.dateTimePickerDue.Name = "dateTimePickerDue";
             this.dateTimePickerDue.Size = new System.Drawing.Size(140, 20);
@@ -70,6 +72,7 @@
             // 
             // buttonOK
             // 
+            this.buttonOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonOK.Location = new System.Drawing.Point(126, 225);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 37);
@@ -80,6 +83,7 @@
             // 
             // buttonCancel
             // 
+            this.buttonCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCancel.Location = new System.Drawing.Point(257, 225);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 36);
@@ -91,6 +95,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(466, 353);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOK);
@@ -98,6 +104,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePickerDue);
             this.Controls.Add(this.textBoxText);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormEdit";
             this.Text = "Редактирование дела";
             this.Load += new System.EventHandler(this.FormEdit_Load);

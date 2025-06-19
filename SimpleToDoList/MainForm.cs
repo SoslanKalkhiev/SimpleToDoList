@@ -129,5 +129,10 @@ namespace SimpleToDoList
         {
 
         }
+
+        private void labelTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
