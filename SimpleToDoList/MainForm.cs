@@ -83,7 +83,6 @@ namespace SimpleToDoList
             foreach (var t in tasks)
             {
                 listBoxTasks.Items.Add(t);
-                ToDoStorage.Save(tasks);
             }
             for (int i = 0; i < tasks.Count; i++)
             {
