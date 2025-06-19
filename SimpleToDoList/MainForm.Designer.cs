@@ -41,31 +41,31 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(466, 231);
+            this.buttonAdd.Location = new System.Drawing.Point(489, 237);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(89, 40);
+            this.buttonAdd.Size = new System.Drawing.Size(89, 37);
             this.buttonAdd.TabIndex = 0;
-            this.buttonAdd.Text = "button1";
+            this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(466, 289);
+            this.buttonRemove.Location = new System.Drawing.Point(489, 291);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(89, 38);
+            this.buttonRemove.Size = new System.Drawing.Size(89, 37);
             this.buttonRemove.TabIndex = 1;
-            this.buttonRemove.Text = "button2";
+            this.buttonRemove.Text = "Убрать";
             this.buttonRemove.UseVisualStyleBackColor = true;
             this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
             // buttonToggleDone
             // 
-            this.buttonToggleDone.Location = new System.Drawing.Point(466, 345);
+            this.buttonToggleDone.Location = new System.Drawing.Point(489, 345);
             this.buttonToggleDone.Name = "buttonToggleDone";
             this.buttonToggleDone.Size = new System.Drawing.Size(89, 37);
             this.buttonToggleDone.TabIndex = 2;
-            this.buttonToggleDone.Text = "button3";
+            this.buttonToggleDone.Text = "Изменить состояние";
             this.buttonToggleDone.UseVisualStyleBackColor = true;
             this.buttonToggleDone.Click += new System.EventHandler(this.buttonToggleDone_Click);
             // 
@@ -97,28 +97,28 @@
             this.checkBoxDone.AutoSize = true;
             this.checkBoxDone.Location = new System.Drawing.Point(451, 167);
             this.checkBoxDone.Name = "checkBoxDone";
-            this.checkBoxDone.Size = new System.Drawing.Size(80, 17);
+            this.checkBoxDone.Size = new System.Drawing.Size(83, 17);
             this.checkBoxDone.TabIndex = 6;
-            this.checkBoxDone.Text = "checkBox1";
+            this.checkBoxDone.Text = "Выполнено";
             this.checkBoxDone.UseVisualStyleBackColor = true;
             // 
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new System.Drawing.Point(448, 50);
+            this.labelTitle.Location = new System.Drawing.Point(448, 63);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(35, 13);
+            this.labelTitle.Size = new System.Drawing.Size(79, 13);
             this.labelTitle.TabIndex = 7;
-            this.labelTitle.Text = "label1";
+            this.labelTitle.Text = "Введите дело:";
             // 
             // labelDueDate
             // 
             this.labelDueDate.AutoSize = true;
             this.labelDueDate.Location = new System.Drawing.Point(448, 125);
             this.labelDueDate.Name = "labelDueDate";
-            this.labelDueDate.Size = new System.Drawing.Size(35, 13);
+            this.labelDueDate.Size = new System.Drawing.Size(77, 13);
             this.labelDueDate.TabIndex = 8;
-            this.labelDueDate.Text = "label2";
+            this.labelDueDate.Text = "Введите дату:";
             // 
             // MainForm
             // 
@@ -135,7 +135,7 @@
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.buttonAdd);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Список дел";
             this.ResumeLayout(false);
             this.PerformLayout();
 

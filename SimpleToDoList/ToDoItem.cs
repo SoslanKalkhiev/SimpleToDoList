@@ -27,11 +27,11 @@ namespace SimpleToDoList
         {
             if (!IsDone && DueDate < DateTime.Today)
             {
-                return Title + " (Overdue)";
+                return Title + " Просрочено";
             }
             if (IsDone)
             {
-                return "[Done] " + Title;
+                return "Выполнено " + Title;
             }
 
             return $"{Title} ({DueDate:dd.MM.yyyy})";
