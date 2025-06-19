@@ -94,5 +94,26 @@ namespace SimpleToDoList
                 }
             }
         }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            if (listBoxTasks.SelectedItem is ToDoItem item)
+            {
+             
+                using (var editForm = new FormEdit(item))
+                {
+                    if (editForm.ShowDialog() == DialogResult.OK)
+                    {
+                        // После закрытия с OK — обновляем список
+                        RefreshTasksList();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Сначала выберите дело из списка.", "Внимание",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

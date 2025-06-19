@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimpleToDoList
 {
-    internal class ToDoItem
+    public class ToDoItem
     {
         public string Title { get; set; }
         public DateTime DueDate { get; set; }

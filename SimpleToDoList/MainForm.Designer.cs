@@ -37,13 +37,14 @@
             this.checkBoxDone = new System.Windows.Forms.CheckBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelDueDate = new System.Windows.Forms.Label();
+            this.buttonEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(489, 237);
+            this.buttonAdd.Location = new System.Drawing.Point(482, 237);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(89, 37);
+            this.buttonAdd.Size = new System.Drawing.Size(96, 37);
             this.buttonAdd.TabIndex = 0;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -51,9 +52,9 @@
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(489, 291);
+            this.buttonRemove.Location = new System.Drawing.Point(626, 237);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(89, 37);
+            this.buttonRemove.Size = new System.Drawing.Size(96, 37);
             this.buttonRemove.TabIndex = 1;
             this.buttonRemove.Text = "Убрать";
             this.buttonRemove.UseVisualStyleBackColor = true;
@@ -61,9 +62,9 @@
             // 
             // buttonToggleDone
             // 
-            this.buttonToggleDone.Location = new System.Drawing.Point(489, 345);
+            this.buttonToggleDone.Location = new System.Drawing.Point(482, 345);
             this.buttonToggleDone.Name = "buttonToggleDone";
-            this.buttonToggleDone.Size = new System.Drawing.Size(89, 37);
+            this.buttonToggleDone.Size = new System.Drawing.Size(96, 37);
             this.buttonToggleDone.TabIndex = 2;
             this.buttonToggleDone.Text = "Изменить состояние";
             this.buttonToggleDone.UseVisualStyleBackColor = true;
@@ -120,11 +121,22 @@
             this.labelDueDate.TabIndex = 8;
             this.labelDueDate.Text = "Введите дату:";
             // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Location = new System.Drawing.Point(626, 345);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(96, 37);
+            this.buttonEdit.TabIndex = 9;
+            this.buttonEdit.Text = "Редактировать";
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.labelDueDate);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.checkBoxDone);
@@ -152,6 +164,7 @@
         private System.Windows.Forms.CheckBox checkBoxDone;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelDueDate;
+        private System.Windows.Forms.Button buttonEdit;
     }
 }
 
