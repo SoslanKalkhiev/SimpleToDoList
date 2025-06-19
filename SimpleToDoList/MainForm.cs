@@ -16,6 +16,7 @@ namespace SimpleToDoList
         public MainForm()
         {
             InitializeComponent();
+            tasks = ToDoStorage.Load();
             RefreshTasksList();
         }
 
@@ -36,6 +37,7 @@ namespace SimpleToDoList
             textBoxTitle.Text = "";
             checkBoxDone.Checked = false;
             dateTimePickerDue.Value = DateTime.Today;
+            ToDoStorage.Save(tasks);    
             RefreshTasksList();
         }
 
@@ -45,6 +47,7 @@ namespace SimpleToDoList
             if (idx >= 0 && idx < tasks.Count)
             {
                 tasks.RemoveAt(idx);
+                ToDoStorage.Save(tasks);
                 RefreshTasksList();
             }
         }
@@ -55,6 +58,7 @@ namespace SimpleToDoList
             if (idx >= 0 && idx < tasks.Count)
             {
                 tasks[idx].IsDone = !tasks[idx].IsDone;
+                ToDoStorage.Save(tasks);
                 RefreshTasksList();
             }
         }
@@ -79,6 +83,7 @@ namespace SimpleToDoList
             foreach (var t in tasks)
             {
                 listBoxTasks.Items.Add(t);
+                ToDoStorage.Save(tasks);
             }
             for (int i = 0; i < tasks.Count; i++)
             {
@@ -104,7 +109,7 @@ namespace SimpleToDoList
                 {
                     if (editForm.ShowDialog() == DialogResult.OK)
                     {
-                        // После закрытия с OK — обновляем список
+                        ToDoStorage.Save(tasks);
                         RefreshTasksList();
                     }
                 }

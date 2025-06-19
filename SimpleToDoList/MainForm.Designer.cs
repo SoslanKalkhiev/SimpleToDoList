@@ -44,7 +44,7 @@
             // 
             this.buttonAdd.Location = new System.Drawing.Point(482, 237);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(96, 37);
+            this.buttonAdd.Size = new System.Drawing.Size(96, 48);
             this.buttonAdd.TabIndex = 0;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -52,9 +52,9 @@
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(626, 237);
+            this.buttonRemove.Location = new System.Drawing.Point(617, 237);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(96, 37);
+            this.buttonRemove.Size = new System.Drawing.Size(96, 48);
             this.buttonRemove.TabIndex = 1;
             this.buttonRemove.Text = "Убрать";
             this.buttonRemove.UseVisualStyleBackColor = true;
@@ -62,9 +62,9 @@
             // 
             // buttonToggleDone
             // 
-            this.buttonToggleDone.Location = new System.Drawing.Point(482, 345);
+            this.buttonToggleDone.Location = new System.Drawing.Point(482, 321);
             this.buttonToggleDone.Name = "buttonToggleDone";
-            this.buttonToggleDone.Size = new System.Drawing.Size(96, 37);
+            this.buttonToggleDone.Size = new System.Drawing.Size(96, 48);
             this.buttonToggleDone.TabIndex = 2;
             this.buttonToggleDone.Text = "Изменить состояние";
             this.buttonToggleDone.UseVisualStyleBackColor = true;
@@ -123,9 +123,9 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(626, 345);
+            this.buttonEdit.Location = new System.Drawing.Point(617, 321);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(96, 37);
+            this.buttonEdit.Size = new System.Drawing.Size(96, 48);
             this.buttonEdit.TabIndex = 9;
             this.buttonEdit.Text = "Редактировать";
             this.buttonEdit.UseVisualStyleBackColor = true;
